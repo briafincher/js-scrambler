@@ -45,12 +45,14 @@
 
             // If the user guesses wrong, tell them they were wrong and show the right word.
 
-            if (guess === word) {
-                alert("That's right, yay!!!");
-            } else {
-                alert("That's wrong. Here's the correct word: " + word);
+            while (true) {
+                if (guess !== word) {
+                    guess = prompt("That's wrong :(. Try again! \n\nRemember: this is the scrambled word: " + scrambled + "\n\nWhat is your guess? ").toLowerCase().trim();
+                } else {
+                    alert("That's right, yay!!!");
+                    break;
+                }
             }
-
 
             // If the user guesses the correct word, congratulate them.
 
